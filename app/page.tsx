@@ -40,7 +40,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Bloco de Integração com o NotebookLM (Inserido logo abaixo dos cases) */}
+        {/* Bloco de Integração com o NotebookLM */}
         <div className="mt-12 p-8 bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl text-white shadow-xl border border-slate-700 text-center">
           <h3 className="text-2xl font-bold mb-3">Quer explorar os meus cases a fundo?</h3>
           <p className="text-slate-300 max-w-2xl mx-auto mb-6 text-sm md:text-base">
@@ -52,14 +52,14 @@ export default function Home() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-6 py-3 font-semibold text-slate-900 bg-white rounded-xl hover:bg-slate-100 transition-colors shadow-md"
           >
-            Interagir com o Portfólio IA 🚀
+            Interagir com o Portfólio IA 🤖
           </a>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="max-w-5xl mx-auto px-6 py-12 text-center text-slate-500 text-sm border-t border-slate-900 mt-20">
-        <p>© {new Date().getFullYear()} Miroslava Godoy. Todos os direitos reservados.</p>
+        <p>© 2026 Miroslava Godoy. Todos os direitos reservados.</p>
       </footer>
     </main>
   );
