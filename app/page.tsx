@@ -129,8 +129,8 @@ export default function Home() {
     <main className="min-h-screen bg-[#FAFAFA] text-[#191919] font-sans relative">
       {/* Cabeçalho / Banner do Topo */}
       <header className="max-w-4xl mx-auto px-6 pt-10 pb-12 text-center">
-        {/* Banner Ilustrativo do Topo */}
-        <div className="w-full relative mb-8 rounded-2xl overflow-hidden shadow-sm border border-gray-200 aspect-[21/9]">
+        {/* Banner com proporção exata 1024x440 */}
+        <div className="w-full relative mb-8 rounded-2xl overflow-hidden shadow-sm border border-gray-200 aspect-[1024/440]">
           <Image 
             src="/banner.png" 
             alt="Banner Portfólio Miroslava Godoy"
@@ -142,7 +142,7 @@ export default function Home() {
 
         {/* Subtítulo / Proposta de Valor Atualizado */}
         <p className="text-xs md:text-sm font-semibold text-gray-700 tracking-wide uppercase mb-10 max-w-3xl mx-auto leading-relaxed">
-          Consultoria de Planejamento Estratégico de Comunicação | Brand Experience · Live Marketing · Shopper · Omnichannel · Social Media | Inovação & IA Aplicada
+          Consultoria de Planejamento de Comunicação | Brand Experience · Live Marketing · Shopper · Omnichannel · Social Media | Inovação & IA Aplicada
         </p>
 
         {/* Seção Sobre */}
