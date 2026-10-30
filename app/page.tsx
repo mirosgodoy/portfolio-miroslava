@@ -112,7 +112,6 @@ export default function Home() {
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // Auto-rolagem para a última mensagem do chat
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, isChatOpen]);
@@ -154,7 +153,6 @@ export default function Home() {
     setMessages(prev => [...prev, userMsg]);
     if (!customText) setInputMessage('');
 
-    // Lógica inteligente do Chatbot integrado simulando o cérebro do agente
     setTimeout(() => {
       const query = textToSend.toLowerCase();
       let botReply = "Essa é uma excelente pergunta! A Miroslava possui mais de 15 anos de experiência como Planner e Estrategista Sênior. Recomendo explorar os cases completos no portfólio acima ou entrar em contato direto pelo e-mail miroslava@gmail.com.";
@@ -320,10 +318,23 @@ export default function Home() {
         <p>Miroslava Godoy · Planner & Estrategista Sênior © 2026</p>
       </footer>
 
-      {/* WIDGET DE CHAT INTEGRADO NATIVO */}
-      <div className="fixed bottom-6 right-6 z-50 font-sans">
+      {/* WIDGET DE CHAT INTEGRADO NATIVO COM CHAMADA DE ALTO DESTAQUE */}
+      <div className="fixed bottom-6 right-6 z-50 font-sans flex items-center gap-3">
+        {/* Balão de Chamada da IA em Destaque Absoluto */}
+        {!isChatOpen && (
+          <div className="flex items-center bg-[#0A66C2] text-white shadow-2xl px-5 py-3 rounded-2xl text-xs md:text-sm font-bold animate-bounce relative border-2 border-white">
+            <span className="mr-2 text-base">🤖</span> 
+            <div>
+              <p className="leading-tight">Fale com a IA da Miroslava!</p>
+              <p className="text-[10px] text-blue-100 font-normal">Tire dúvidas sobre os cases e senioridade</p>
+            </div>
+            {/* Seta do balão */}
+            <div className="absolute -right-2 top-1/2 -translate-y-1/2 w-3.5 h-3.5 bg-[#0A66C2] border-t-2 border-r-2 border-white rotate-45"></div>
+          </div>
+        )}
+
         {isChatOpen && (
-          <div className="mb-4 w-80 md:w-96 h-[500px] bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden flex flex-col">
+          <div className="absolute bottom-20 right-0 w-80 md:w-96 h-[500px] bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden flex flex-col">
             {/* Cabeçalho do Chat */}
             <div className="bg-[#0A66C2] text-white p-4 flex justify-between items-center shadow-sm">
               <div>
@@ -409,13 +420,13 @@ export default function Home() {
         {/* Botão Flutuante do Chat */}
         <button
           onClick={() => setIsChatOpen(!isChatOpen)}
-          className="bg-[#0A66C2] text-white p-4 rounded-full shadow-lg hover:bg-[#004182] transition-all hover:scale-105 flex items-center justify-center group relative"
+          className="bg-[#0A66C2] text-white p-4 rounded-full shadow-2xl hover:bg-[#004182] transition-all hover:scale-105 flex items-center justify-center group relative"
           aria-label="Abrir assistente virtual"
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
           </svg>
-          <span className="absolute -top-1 -right-1 bg-green-500 w-3 h-3 rounded-full border-2 border-white animate-pulse"></span>
+          <span className="absolute -top-1 -right-1 bg-green-500 w-3.5 h-3.5 rounded-full border-2 border-white animate-pulse"></span>
         </button>
       </div>
     </main>
