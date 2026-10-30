@@ -142,7 +142,7 @@ export default function Home() {
 
         {/* Subtítulo / Proposta de Valor Atualizado */}
         <p className="text-xs md:text-sm font-semibold text-gray-700 tracking-wide uppercase mb-10 max-w-3xl mx-auto leading-relaxed">
-          Consultoria de Planejamento de Comunicação | Brand Experience · Live Marketing · Shopper · Omnichannel · Social Media | Inovação & IA Aplicada
+          Consultoria de Planejamento de Comunicação | Live Marketing · Shopper Experience · Social Media · Omnichannel | Inovação & IA Aplicada
         </p>
 
         {/* Seção Sobre */}
