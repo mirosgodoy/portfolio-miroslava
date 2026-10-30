@@ -190,7 +190,7 @@ export default function Home() {
         </h1>
         
         <p className="text-xs md:text-sm font-semibold text-gray-700 tracking-wide uppercase mb-10 max-w-3xl mx-auto leading-relaxed">
-          Planner & Estrategista Sênior | Consultoria de Planejamento Estratégico de Comunicação | Brand Experience · Live Marketing · Shopper · Omnichannel · Social Media | Inovação & IA Aplicada
+          Planner & Estrategista Sênior | Consultoria de Planejamento de Comunicação | Brand Experience · Live Marketing · Shopper · Omnichannel · Social Media | Inovação & IA Aplicada
         </p>
 
         {/* Seção Sobre */}
