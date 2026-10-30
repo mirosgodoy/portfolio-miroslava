@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 interface ProjectCard {
@@ -126,14 +127,22 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#FAFAFA] text-[#191919] font-sans relative">
-      {/* Cabeçalho Principal / Hero */}
-      <header className="max-w-4xl mx-auto px-6 pt-20 pb-12 text-center">
-        <h1 className="text-xl md:text-3xl font-extrabold text-[#0A66C2] tracking-tight mb-4">
-          MIROSLAVA GODOY
-        </h1>
-        
+      {/* Cabeçalho / Banner do Topo */}
+      <header className="max-w-4xl mx-auto px-6 pt-10 pb-12 text-center">
+        {/* Banner Ilustrativo do Topo */}
+        <div className="w-full relative mb-8 rounded-2xl overflow-hidden shadow-sm border border-gray-200 aspect-[21/9]">
+          <Image 
+            src="/banner.png" 
+            alt="Banner Portfólio Miroslava Godoy"
+            fill
+            style={{ objectFit: 'cover' }}
+            priority
+          />
+        </div>
+
+        {/* Subtítulo / Proposta de Valor Atualizado */}
         <p className="text-xs md:text-sm font-semibold text-gray-700 tracking-wide uppercase mb-10 max-w-3xl mx-auto leading-relaxed">
-          Planner & Estrategista Sênior | Consultoria de Planejamento de Comunicação | Brand Experience · Live Marketing · Shopper · Omnichannel · Social Media | Inovação & IA Aplicada
+          Consultoria de Planejamento Estratégico de Comunicação | Brand Experience · Live Marketing · Shopper · Omnichannel · Social Media | Inovação & IA Aplicada
         </p>
 
         {/* Seção Sobre */}
