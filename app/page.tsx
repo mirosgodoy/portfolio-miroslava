@@ -106,7 +106,7 @@ export default function Home() {
   const [messages, setMessages] = useState<Message[]>([
     {
       sender: 'bot',
-      text: 'Olá! Sou o assistente virtual da Miroslava Godoy. Como posso ajudar você hoje? Pergunte sobre sua experiência sênior, cases (Faber-Castell, Diageo, Pepsico, Munich Re) ou inovação com IA.'
+      text: 'Olá! Sou o assistente virtual da Miroslava Godoy. Como posso ajudar você hoje? Pergunte sobre sua experiência sênior, campanhas de incentivo, cases (Faber-Castell, Diageo, Pepsico, Munich Re) ou inovação com IA.'
     }
   ]);
 
@@ -155,24 +155,29 @@ export default function Home() {
 
     setTimeout(() => {
       const query = textToSend.toLowerCase();
-      let botReply = "Essa é uma excelente pergunta! A Miroslava possui mais de 15 anos de experiência como Planner e Estrategista Sênior. Recomendo explorar os cases completos no portfólio acima ou entrar em contato direto pelo e-mail miroslava@gmail.com.";
+      let botReply = "";
 
+      // 1. Verificação de Perfil e Experiência Sênior
       if (query.includes('experiência') || query.includes('perfil') || query.includes('anos') || query.includes('quem é') || query.includes('trajetória')) {
         botReply = "A Miroslava é Estrategista Sênior com mais de 15 anos de experiência combinando planejamento de comunicação, comportamento do consumidor, análise de dados e visão de negócios. Com base original em Direção de Arte, ela conecta a visão analítica à execução criativa, unindo Live Marketing, Trade Marketing, Omnichannel, Social Media e Inovação com Inteligência Artificial Aplicada.";
-      } else if (query.includes('incentivo') || query.includes('diageo') || query.includes('smirnoff') || query.includes('rússia') || query.includes('copa')) {
-        botReply = "Sim, a Miroslava tem forte experiência em campanhas de incentivo! Para a Diageo (Smirnoff Ice), ela liderou a estratégia de ponta a ponta para a Copa do Mundo de 2018 na Rússia. O projeto engajou 400 participantes da força de vendas com uma jornada 360º (pré-lançamento com teasers no WhatsApp, evento de lançamento em atmosfera de estádio, hotsite de ranking e gamificação em realidade virtual) e premiou os 10 melhores com uma vivência internacional de alto padrão na Rússia.";
-      } else if (query.includes('faber') || query.includes('ccxp') || query.includes('guinness') || query.includes('desenho épico')) {
-        botReply = "No case da Faber-Castell (CCXP), a Miroslava criou o 'Desenho Épico' para a estreia da marca no evento. A ação entrou para o Guinness Book com 11,5 km e mais de 4 mil participantes, gerando brand awareness, conversão de vendas, PR e endomarketing.";
-      } else if (query.includes('ia') || query.includes('inteligência artificial') || query.includes('munich') || query.includes('fides')) {
-        botReply = "A Miroslava é especialista em IA Aplicada. No case da Munich Re (FIDES Rio), ela idealizou um painel interativo (Interactive Wall + DALL-E) combinando Data Analytics, Green Tech e cocriação de futuros sustentáveis para captação de leads qualificados C-Level.";
-      } else if (query.includes('pepsico') || query.includes('elma chips') || query.includes('são joão') || query.includes('bowl')) {
-        botReply = "Para a Elma Chips (PepsiCo), na campanha de São João no Nordeste, ela criou o 'Bowl Infinito': um brinde modular inovador em polipropileno (PP), unindo baixo custo de produção e altíssimo valor percebido pelo shopper.";
-      } else if (query.includes('malwee') || query.includes('esg')) {
-        botReply = "Para o Grupo Malwee, ela desenvolveu uma convenção de vendas imersiva ancorada nos pilares do Plano ESG 2030, contando com cenografia sustentável, ativações com IA e materiais ecológicos.";
-      } else if (query.includes('greenpeace')) {
-        botReply = "Para o Greenpeace Brasil, conduziu um estudo completo de inteligência de dados e social listening, analisando vocação de canais e desenhando a jornada estratégica para captação de leads e doadores.";
-      } else if (query.includes('contato') || query.includes('email') || query.includes('falar') || query.includes('recrutador') || query.includes('telefone') || query.includes('whatsapp')) {
+      } 
+      // 2. Verificação de Contato
+      else if (query.includes('contato') || query.includes('email') || query.includes('falar') || query.includes('recrutador') || query.includes('telefone') || query.includes('whatsapp')) {
         botReply = "Você pode falar diretamente com a Miroslava através dos canais oficiais:\n- E-mail: miroslava@gmail.com\n- WhatsApp: 11 97416-9770\n- LinkedIn: linkedin.com/in/mirosgodoy\nOu preenchendo o formulário de contato ao final da página!";
+      } 
+      // 3. Pesquisa Inteligente Direta nos Resumos dos Cases Cadastrados
+      else {
+        const foundProject = projects.find(p => 
+          query.split(' ').some(word => word.length > 3 && (p.titleLine1.toLowerCase().includes(word) || p.slug.includes(word) || p.resumo.toLowerCase().includes(word))) ||
+          query.includes(p.slug) || query.includes(p.titleLine1.toLowerCase())
+        );
+
+        if (foundProject) {
+          botReply = `Sobre o case da **${foundProject.titleLine1}** (${foundProject.subtitulo}):\n\n${foundProject.resumo}\n\nQuer saber mais detalhes ou explorar outro projeto?`;
+        } else {
+          // Resposta rica padrão caso não ache um case específico
+          botReply = "Essa é uma excelente pergunta! A Miroslava possui mais de 15 anos de experiência como Planner e Estrategista Sênior, com passagens marcantes por grandes marcas (Faber-Castell, Diageo/Smirnoff, PepsiCo, Munich Re, Greenpeace, entre outras). Você pode explorar os cases completos no portfólio acima ou entrar em contato direto pelo e-mail miroslava@gmail.com.";
+        }
       }
 
       setMessages(prev => [...prev, { sender: 'bot', text: botReply }]);
