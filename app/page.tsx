@@ -10,12 +10,12 @@ interface ProjectCard {
   titleLine2?: string;
   tag: string;
   resumo: string;
-  detalhesIA: string;
 }
 
 interface Message {
   sender: 'bot' | 'user';
   text: string;
+  isAction?: boolean;
 }
 
 const projects: ProjectCard[] = [
@@ -24,88 +24,77 @@ const projects: ProjectCard[] = [
     subtitulo: "ATIVAÇÃO COLABORATIVA",
     titleLine1: "FABER-CASTELL",
     tag: "Live Marketing",
-    resumo: "A ativação Desenho Épico, criada para a estreia da Faber-Castell na CCXP, gerou experimentação de produto, brand awareness, vendas, virou ação de endomarketing, case de PR e entrou para o Guinness Book como “O Maior Desenho Colaborativo do Mundo” com 11,5 km e mais de 4 mil participantes.",
-    detalhesIA: "No case da Faber-Castell (CCXP), a Miroslava liderou o 'Desenho Épico': uma ativação colaborativa colossal que marcou a estreia da marca no evento. O projeto uniu experimentação, brand awareness, vendas e endomarketing, gerando um imenso impacto de PR e entrando para o Guinness Book com um desenho contínuo de 11,5 km e mais de 4 mil participantes na feira e na fábrica em São Carlos."
+    resumo: "A ativação Desenho Épico, criada para a estreia da Faber-Castell na CCXP, gerou experimentação de produto, brand awareness, vendas, virou ação de endomarketing, case de PR e entrou para o Guinness Book como “O Maior Desenho Colaborativo do Mundo” com 11,5 km e mais de 4 mil participantes."
   },
   {
     slug: "munich-re",
     subtitulo: "ATIVAÇÃO COM IA",
     titleLine1: "MUNICH RE",
     tag: "Live Marketing",
-    resumo: "Planejamento para a participação da resseguradora global alemã Munich Re na FIDES Rio, o maior encontro de líderes do mercado de seguros da América Latina. O projeto engloba: diagnóstico de marca, conceito criativo, jornada 360º, ativação phygital com IA para geração de leads e curadoria de experiências C-Level.",
-    detalhesIA: "No case da Munich Re (FIDES Rio), a Miroslava planejou a participação da resseguradora alemã no maior encontro de seguros da América Latina. O projeto entregou um diagnóstico profundo, conceito criativo, jornada 360º e uma inovadora ativação phygital com inteligência artificial (Interactive Wall + DALL-E) voltada à geração de leads qualificados C-Level e cocriação de futuros sustentáveis."
+    resumo: "Planejamento para a participação da resseguradora global alemã Munich Re na FIDES Rio, o maior encontro de líderes do mercado de seguros da América Latina. O projeto engloba: diagnóstico de marca, conceito criativo, jornada 360º, ativação phygital com IA para geração de leads e curadoria de experiências C-Level."
   },
   {
     slug: "grupo-malwee",
     subtitulo: "CONVENÇÃO DE VENDAS",
     titleLine1: "GRUPO MALWEE",
     tag: "Live Marketing",
-    resumo: "Em vez de um evento tradicional, desenvolvemos uma experiência imersiva desde o início, baseada nos pilares do Plano ESG 2030 do Grupo Malwee, incluindo cenografia sustentável, ativações com IA, materiais ecológicos e a festa de encerramento com atrações que promovem a consciencialização ambiental.",
-    detalhesIA: "Para o Grupo Malwee, a Miroslava substituiu a convenção de vendas tradicional por uma experiência imersiva ancorada nos pilares do Plano ESG 2030. A estratégia integrou cenografia sustentável, ativações com IA, materiais ecológicos e uma festa de encerramento focada em conscientização ambiental e engajamento da força de vendas."
+    resumo: "Em vez de um evento tradicional, desenvolvemos uma experiência imersiva desde o início, baseada nos pilares do Plano ESG 2030 do Grupo Malwee, incluindo cenografia sustentável, ativações com IA, materiais ecológicos e a festa de encerramento com atrações que promovem a consciencialização ambiental."
   },
   {
     slug: "greenpeace-brasil",
     subtitulo: "DATA STRATEGY",
     titleLine1: "GREENPEACE BRASIL",
     tag: "Social Media",
-    resumo: "Estudo completo de inteligência de dados e social listening para o Greenpeace Brasil. Apresenta auditoria de conteúdo, vocação de canais (Facebook, Instagram e Twitter), análise de saúde de marca e a jornada estratégica para captação de leads e doadores.",
-    detalhesIA: "No case do Greenpeace Brasil, a Miroslava estruturou um estudo completo de inteligência de dados e social listening. O projeto envolveu auditoria rigorosa de conteúdo, definição de vocação de canais (Facebook, Instagram e Twitter), análise de saúde de marca e o desenho da jornada estratégica para captação de leads e doadores."
+    resumo: "Estudo completo de inteligência de dados e social listening para o Greenpeace Brasil. Apresenta auditoria de conteúdo, vocação de canais (Facebook, Instagram e Twitter), análise de saúde de marca e a jornada estratégica para captação de leads e doadores."
   },
   {
     slug: "linea",
     subtitulo: "COMUNICAÇÃO OMNICHANNEL",
     titleLine1: "LINEA ALIMENTOS",
     tag: "Trade Marketing",
-    resumo: "Planejamento de trade marketing para a campanha de Páscoa da Linea Alimentos. Detalha a análise de comportamento de compra, drivers de consumo, jornada omnichannel, campanhas com influenciadores e inovações no PDV e e-commerce.",
-    detalhesIA: "Para a Linea Alimentos, a Miroslava liderou o planejamento de trade marketing da campanha de Páscoa. O projeto mapeou profundamente o comportamento de compra e drivers de consumo, estruturando uma jornada omnichannel robusta com campanhas de influenciadores e inovações estratégicas no PDV e no e-commerce."
+    resumo: "Planejamento de trade marketing para a campanha de Páscoa da Linea Alimentos. Detalha a análise de comportamento de compra, drivers de consumo, jornada omnichannel, campanhas com influenciadores e inovações no PDV e e-commerce."
   },
   {
     slug: "boehringer-ingelheim",
     subtitulo: "EVENTO HÍBRIDO",
     titleLine1: "BOEHRINGER INGELHEIM (BI BRASIL)",
     tag: "Live Marketing",
-    resumo: "Planejamento para o Leadership Meeting da farmacêutica Boehringer Ingelheim, marcando a retomada gradual aos eventos físicos em formato híbrido e 100% Carbon Free. Apresenta criação do conceito, incorporação de práticas ESG durante todo os evento, transformação do formato de um clássico programa de auditório de TV em uma experiência phygital por meio de uma plataforma que garantiu a interação entre os públicos on e off.",
-    detalhesIA: "No Leadership Meeting da Boehringer Ingelheim, a Miroslava planejou a retomada aos eventos em formato híbrido e 100% Carbon Free. O conceito transformou o formato de um auditório de TV clássico em uma experiência phygital interativa por plataforma digital, unindo com perfeição os públicos presencial e remoto sob fortes diretrizes ESG."
+    resumo: "Planejamento para o Leadership Meeting da farmacêutica Boehringer Ingelheim, marcando a retomada gradual aos eventos físicos em formato híbrido e 100% Carbon Free. Apresenta criação do conceito, incorporação de práticas ESG durante todo os evento, transformação do formato de um clássico programa de auditório de TV em uma experiência phygital por meio de uma plataforma que garantiu a interação entre os públicos on e off."
   },
   {
     slug: "whirlpool",
     subtitulo: "SHOPPER EXPERIENCE",
     titleLine1: "BRASTEMP & CONSUL",
     tag: "Trade Marketing",
-    resumo: "A estratégia para o lançamento de fogões da Brastemp e Consul partiu de insights comportamentais para traduzir features de produto em benefícios emocionais claros e desejáveis. Abrange o cenário de categoria, mapeamento profundo do comportamento do shopper e da jornada de compra, além da criação de materiais inovadores para o ponto de venda transformando a experiência na loja física.",
-    detalhesIA: "Para Brastemp e Consul (Whirlpool), a Miroslava estruturou a estratégia de lançamento de fogões a partir de insights comportamentais avançados, traduzindo atributos técnicos em benefícios emocionais. O projeto cobriu o mapeamento da jornada do shopper e o redesenho completo de materiais de PDV para transformar a experiência na loja física."
+    resumo: "A estratégia para o lançamento de fogões da Brastemp e Consul partiu de insights comportamentais para traduzir features de produto em benefícios emocionais claros e desejáveis. Abrange o cenário de categoria, mapeamento profundo do comportamento do shopper e da jornada de compra, além da criação de materiais inovadores para o ponto de venda transformando a experiência na loja física."
   },
   {
     slug: "elmex",
     subtitulo: "EVENTO DE LANÇAMENTO",
     titleLine1: "ELMEX (COLGATE-PALMOLIVE)",
     tag: "Live Marketing",
-    resumo: "A estratégia partiu da premissa de traduzir a sofisticação, tradição e alta performance científica de uma marca pioneira para o mercado brasileiro. Abrangeu a ocupação imersiva do Museu da Casa Brasileira com projeção de vídeo mapeado na fachada, interações culturais suíças e ativações tecnológicas.",
-    detalhesIA: "No lançamento da Elmex (Colgate-Palmolive) no Brasil, a Miroslava traduziu a alta performance científica e sofisticação suíça da marca através de uma ocupação imersiva do Museu da Casa Brasileira, incluindo projeção de vídeo mapeado na fachada, ativações tecnológicas e experiências culturais."
+    resumo: "A estratégia partiu da premissa de traduzir a sofisticação, tradição e alta performance científica de uma marca pioneira para o mercado brasileiro. Abrangeu a ocupação imersiva do Museu da Casa Brasileira com projeção de vídeo mapeado na fachada, interações culturais suíças e ativações tecnológicas."
   },
   {
     slug: "claro",
     subtitulo: "ESTRATÉGIA DE POSITIVAÇÃO",
     titleLine1: "CLARO",
     tag: "Trade Marketing",
-    resumo: "Apresentação estratégica de positivação e trade marketing para o ecossistema de lojas da Claro. Detalha o mapeamento da jornada do consumidor, a segmentação de pontos de contato e o redesenho de materiais de PDV segundo os objetivos de comunicação, combatendo a poluição visual e garantindo que a proposta de valor e os benefícios de ser cliente Claro se destacassem frente à concorrência.",
-    detalhesIA: "Para a Claro, a Miroslava desenvolveu a estratégia de positivação e trade marketing para o ecossistema de lojas. O trabalho focou no mapeamento da jornada, segmentação de pontos de contato e eliminação de poluição visual no PDV, garantindo que a proposta de valor da operadora se destacasse com clareza frente à concorrência."
+    resumo: "Apresentação estratégica de positivação e trade marketing para o ecossistema de lojas da Claro. Detalha o mapeamento da jornada do consumidor, a segmentação de pontos de contato e o redesenho de materiais de PDV segundo os objetivos de comunicação, combatendo a poluição visual e garantindo que a proposta de valor e os benefícios de ser cliente Claro se destacassem frente à concorrência."
   },
   {
     slug: "elma-chips",
     subtitulo: "PROMOPACK",
     titleLine1: "ELMA CHIPS (PEPSICO)",
     tag: "Trade Marketing",
-    resumo: "Apresentação estratégica da campanha de São João da Elma Chips para a região Nordeste. Detalha o mapeamento de tendências de consumo, a análise do contexto regional e o design autoral de um brinde modular inovador: o Bowl Infinito.",
-    detalhesIA: "Na campanha de São João da Elma Chips (PepsiCo) para o Nordeste, a Miroslava liderou a estratégia de trade marketing com base em tendências culturais regionais e desenhou de forma autoral o 'Bowl Infinito' — um brinde modular em polipropileno de baixo custo (até R$ 4) com altíssimo valor percebido pelo shopper."
+    resumo: "Apresentação estratégica da campanha de São João da Elma Chips para a região Nordeste. Detalha o mapeamento de tendências de consumo, a análise do contexto regional e o design autoral de um brinde modular inovador: o Bowl Infinito."
   },
   {
     slug: "smirnoff-ice",
     subtitulo: "CAMPANHA DE INCENTIVO",
     titleLine1: "SMIRNOFF ICE (DIAGEO)",
     tag: "Live Marketing",
-    resumo: "Partindo do contexto da Copa do Mundo na Rússia, transformamos uma campanha de incentivo em uma jornada inesquecível para a força de vendas. Abrangeu o engajamento de 400 participantes, criação de conceito, régua de relacionamento multicanal de longo prazo, gamificação com realidade virtual até a experiência internacional dos ganhadores.",
-    detalhesIA: "Para a Diageo (Smirnoff Ice), a Miroslava liderou a campanha de incentivo de vendas conectada à Copa do Mundo de 2018 na Rússia. O projeto engajou 400 participantes com uma jornada 360º de longo prazo: pré-lançamento com teasers no WhatsApp, evento com atmosfera de estádio, hotsite de ranking, gamificação em realidade virtual e vivência internacional de alto padrão para os 10 vencedores."
+    resumo: "Partindo do contexto da Copa do Mundo na Rússia, transformamos uma campanha de incentivo em uma jornada inesquecível para a força de vendas. Abrangeu o engajamento de 400 participantes, criação de conceito, régua de relacionamento multicanal de longo prazo, gamificação com realidade virtual até a experiência internacional dos ganhadores."
   }
 ];
 
@@ -118,7 +107,7 @@ export default function Home() {
   const [messages, setMessages] = useState<Message[]>([
     {
       sender: 'bot',
-      text: 'Olá! Sou o assistente virtual da Miroslava Godoy. Como posso ajudar você hoje? Pergunte sobre sua experiência sênior, campanhas de incentivo, cases (Faber-Castell, Diageo, Pepsico, Munich Re) ou inovação com IA.'
+      text: 'Olá! Sou o assistente virtual da Miroslava Godoy. Posso tirar dúvidas rápidas sobre sua senioridade e cases, ou direcionar você para conversar diretamente com a IA especialista no Claude.'
     }
   ]);
 
@@ -169,26 +158,12 @@ export default function Home() {
       const query = textToSend.toLowerCase();
       let botReply = "";
 
-      // 1. Perfil e Senioridade
-      if (query.includes('experiência') || query.includes('perfil') || query.includes('anos') || query.includes('quem é') || query.includes('trajetória') || query.includes('senior')) {
+      if (query.includes('experiência') || query.includes('perfil') || query.includes('anos') || query.includes('quem é') || query.includes('senior')) {
         botReply = "A Miroslava é Estrategista Sênior com mais de 15 anos de experiência combinando planejamento de comunicação, comportamento do consumidor, análise de dados e visão de negócios. Com base original em Direção de Arte, ela conecta a visão analítica à execução criativa, unindo Live Marketing, Trade Marketing, Omnichannel, Social Media e Inovação com Inteligência Artificial Aplicada.";
-      } 
-      // 2. Contato
-      else if (query.includes('contato') || query.includes('email') || query.includes('falar') || query.includes('recrutador') || query.includes('telefone') || query.includes('whatsapp')) {
-        botReply = "Você pode falar diretamente com a Miroslava através dos canais oficiais:\n- E-mail: miroslava@gmail.com\n- WhatsApp: 11 97416-9770\n- LinkedIn: linkedin.com/in/mirosgodoy\nOu preenchendo o formulário de contato ao final da página!";
-      } 
-      // 3. Pesquisa Profunda nos Detalhes dos Cases
-      else {
-        const foundProject = projects.find(p => 
-          query.includes(p.slug) || 
-          query.split(' ').some(word => word.length > 3 && (p.titleLine1.toLowerCase().includes(word) || p.subtitulo.toLowerCase().includes(word) || p.tag.toLowerCase().includes(word)))
-        );
-
-        if (foundProject) {
-          botReply = foundProject.detalhesIA + "\n\nGostaria de saber sobre outro projeto ou entrar em contato?";
-        } else {
-          botReply = "Essa é uma excelente pergunta! A Miroslava possui mais de 15 anos de experiência como Planner e Estrategista Sênior, com passagens por grandes marcas como Faber-Castell, Diageo, PepsiCo, Munich Re e Greenpeace. Você pode explorar os cases completos no portfólio acima ou falar diretamente pelo e-mail miroslava@gmail.com.";
-        }
+      } else if (query.includes('contato') || query.includes('email') || query.includes('falar') || query.includes('recrutador') || query.includes('telefone') || query.includes('whatsapp')) {
+        botReply = "Você pode falar diretamente com a Miroslava através dos canais oficiais:\n- E-mail: miroslava@gmail.com\n- WhatsApp: 11 97416-9770\n- LinkedIn: linkedin.com/in/mirosgodoy";
+      } else {
+        botReply = "Para uma análise profunda, estratégica e detalhada deste ou de qualquer outro case, o ideal é conversar com a minha versão especialista completa hospedada no Claude, que possui acesso a todos os documentos de planejamento originais.";
       }
 
       setMessages(prev => [...prev, { sender: 'bot', text: botReply }]);
@@ -334,23 +309,22 @@ export default function Home() {
         <p>Miroslava Godoy · Planner & Estrategista Sênior © 2026</p>
       </footer>
 
-      {/* WIDGET DE CHAT INTEGRADO NATIVO COM CHAMADA DE ALTO DESTAQUE */}
+      {/* WIDGET DE CHAT INTEGRADO COM PONTE PARA O CLAUDE */}
       <div className="fixed bottom-6 right-6 z-50 font-sans flex items-center gap-3">
-        {/* Balão de Chamada da IA em Destaque Absoluto */}
+        {/* Balão de Chamada da IA em Destaque */}
         {!isChatOpen && (
           <div className="flex items-center bg-[#0A66C2] text-white shadow-2xl px-5 py-3 rounded-2xl text-xs md:text-sm font-bold animate-bounce relative border-2 border-white">
             <span className="mr-2 text-base">🤖</span> 
             <div>
               <p className="leading-tight">Fale com a IA da Miroslava!</p>
-              <p className="text-[10px] text-blue-100 font-normal">Tire dúvidas sobre os cases e senioridade</p>
+              <p className="text-[10px] text-blue-100 font-normal">Tire dúvidas ou acesse a IA avançada</p>
             </div>
-            {/* Seta do balão */}
             <div className="absolute -right-2 top-1/2 -translate-y-1/2 w-3.5 h-3.5 bg-[#0A66C2] border-t-2 border-r-2 border-white rotate-45"></div>
           </div>
         )}
 
         {isChatOpen && (
-          <div className="absolute bottom-20 right-0 w-80 md:w-96 h-[500px] bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden flex flex-col">
+          <div className="absolute bottom-20 right-0 w-80 md:w-96 h-[520px] bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden flex flex-col">
             {/* Cabeçalho do Chat */}
             <div className="bg-[#0A66C2] text-white p-4 flex justify-between items-center shadow-sm">
               <div>
@@ -383,6 +357,20 @@ export default function Home() {
                   </div>
                 </div>
               ))}
+
+              {/* Botão de Ação Direta para o Claude */}
+              <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl text-center mt-3">
+                <p className="text-xs text-gray-700 mb-2 font-medium">Quer uma análise técnica e aprofundada com todos os documentos originais?</p>
+                <a 
+                  href="https://claude.ai" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block bg-[#0A66C2] text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-[#004182] transition-colors shadow-sm"
+                >
+                  🚀 Conversar com a IA Especialista no Claude &rarr;
+                </a>
+              </div>
+
               <div ref={messagesEndRef} />
             </div>
 
@@ -393,18 +381,6 @@ export default function Home() {
                 className="bg-white px-2.5 py-1 rounded-full border border-gray-300 text-gray-700 whitespace-nowrap hover:bg-blue-50 hover:text-[#0A66C2]"
               >
                 💼 Experiência
-              </button>
-              <button 
-                onClick={() => handleSendMessage(undefined, "Fale sobre a Faber-Castell")}
-                className="bg-white px-2.5 py-1 rounded-full border border-gray-300 text-gray-700 whitespace-nowrap hover:bg-blue-50 hover:text-[#0A66C2]"
-              >
-                🎨 Faber-Castell
-              </button>
-              <button 
-                onClick={() => handleSendMessage(undefined, "Campanha de incentivo Diageo")}
-                className="bg-white px-2.5 py-1 rounded-full border border-gray-300 text-gray-700 whitespace-nowrap hover:bg-blue-50 hover:text-[#0A66C2]"
-              >
-                🏆 Diageo / Smirnoff
               </button>
               <button 
                 onClick={() => handleSendMessage(undefined, "Como entrar em contato?")}
