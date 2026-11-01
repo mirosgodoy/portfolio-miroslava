@@ -157,8 +157,37 @@ export default function Home() {
         </div>
       </header>
 
+      {/* BLOCO DE INTELIGÊNCIA ARTIFICIAL INTERATIVA ANTES DOS CASES */}
+      <section className="max-w-4xl mx-auto px-6 pb-12 pt-4">
+        <div className="bg-gradient-to-r from-blue-900 to-[#0A66C2] text-white p-8 md:p-10 rounded-3xl shadow-xl text-center relative overflow-hidden">
+          <div className="absolute -right-10 -bottom-10 w-48 h-48 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
+          
+          <span className="bg-blue-500/30 text-blue-100 text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full border border-blue-400/30 inline-block mb-4">
+            🤖 Inteligência Artificial Interativa
+          </span>
+          
+          <h3 className="text-2xl md:text-3xl font-extrabold mb-3 tracking-tight">
+            Quer explorar os meus cases a fundo?
+          </h3>
+          
+          <p className="text-blue-100 text-sm md:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
+            Desenvolvi um assistente interativo exclusivo com inteligência artificial para que recrutadores e gestores possam mergulhar nos detalhes dos meus projetos, estratégias e resultados.
+          </p>
+
+          <a 
+            href="https://notebook.google.com/notebook/577ce4a7-71d1-4766-9ed2-319c83aff4ee" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-white text-[#0A66C2] font-bold px-8 py-4 rounded-2xl text-sm md:text-base hover:bg-blue-50 transition-all shadow-lg hover:scale-105"
+          >
+            <span>Interagir com o Portfólio IA 🤖</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </section>
+
       {/* Lista de Cases Profissionais */}
-      <section className="max-w-4xl mx-auto px-6 pb-8 pt-8">
+      <section className="max-w-4xl mx-auto px-6 pb-8 pt-4">
         <h2 className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-8 text-center">
           Cases de Sucesso
         </h2>
@@ -198,37 +227,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* LINK PARA O NOTEBOOKLM LOGO ABAIXO DOS CASES */}
-      <section className="max-w-4xl mx-auto px-6 pb-16 pt-4">
-        <div className="bg-gradient-to-r from-blue-900 to-[#0A66C2] text-white p-8 md:p-10 rounded-3xl shadow-xl text-center relative overflow-hidden">
-          <div className="absolute -right-10 -bottom-10 w-48 h-48 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
-          
-          <span className="bg-blue-500/30 text-blue-100 text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full border border-blue-400/30 inline-block mb-4">
-            🤖 Inteligência Artificial Interativa
-          </span>
-          
-          <h3 className="text-2xl md:text-3xl font-extrabold mb-3 tracking-tight">
-            Quer explorar os meus cases a fundo?
-          </h3>
-          
-          <p className="text-blue-100 text-sm md:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
-            Desenvolvi um assistente interativo exclusivo com inteligência artificial para que recrutadores e gestores possam mergulhar nos detalhes dos meus projetos, estratégias e resultados.
-          </p>
-
-          <a 
-            href="https://notebook.google.com/notebook/577ce4a7-71d1-4766-9ed2-319c83aff4ee" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-white text-[#0A66C2] font-bold px-8 py-4 rounded-2xl text-sm md:text-base hover:bg-blue-50 transition-all shadow-lg hover:scale-105"
-          >
-            <span>Interagir com o Portfólio IA 🤖</span>
-            <span>&rarr;</span>
-          </a>
-        </div>
-      </section>
-
       {/* Seção de Contato / Captação de Recrutadores */}
-      <section className="max-w-2xl mx-auto px-6 pb-24">
+      <section className="max-w-2xl mx-auto px-6 pb-24 pt-8">
         <div className="bg-white p-8 md:p-10 rounded-2xl border border-gray-200 shadow-sm">
           <div className="text-center mb-6">
             <h2 className="text-xl md:text-2xl font-extrabold text-[#0A66C2] mb-2">
